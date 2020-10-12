@@ -1,5 +1,5 @@
 import { getModelToken } from '@nestjs/mongoose';
-import { Test, TestingModule } from '@nestjs/testing';
+import { Test } from '@nestjs/testing';
 import { CreateProductDTO } from './dto/create-product.dto';
 import { ProductService } from './product.service';
 
