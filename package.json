@@ -43,8 +43,11 @@
     "@typescript-eslint/eslint-plugin": "^2.12.0",
     "@typescript-eslint/parser": "^2.12.0",
     "eslint": "^6.7.2",
+    "eslint-config-airbnb-typescript": "^11.0.0",
     "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-local": "^1.0.0",
     "husky": "^4.3.0",
     "jest": "^24.9.0",
     "lint-staged": "^10.4.0",
@@ -72,8 +75,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit":"npm run format",
-      "pre-push": "git branch | grep \"*\" | egrep -v \"^* master$\""
+      "pre-commit": "npm run format",
+      "pre-push": "npm run lint && git branch | grep \"*\" | egrep -v \"^* master$\""
     }
   }
 }
