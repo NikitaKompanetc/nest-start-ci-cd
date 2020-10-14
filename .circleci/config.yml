@@ -17,7 +17,7 @@ workflows:
       - build-test
       - heroku/deploy-via-git:
           requires:
-            - build
+            - build-test
           filters:
             branches:
               only: master
