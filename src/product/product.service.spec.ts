@@ -33,17 +33,14 @@ describe('ProductService', () => {
         price: 'sample price',
       };
       console.log(createProductDto);
-      
-      const product = await new productService.productDocument(
-        createProductDto,
-      ).save();
+
+      const product = await new productService.productDocument(createProductDto).save();
 
       const result = await productService.createProduct(createProductDto);
-    
-      console.log(1,result);
-      console.log(2,product);
-      
-      
+
+      console.log(1, result);
+      console.log(2, product);
+
       expect(result).toEqual(product);
     });
   });
