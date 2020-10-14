@@ -3,18 +3,14 @@ orbs:
   node: circleci/node@3.0.0
   heroku: circleci/heroku@1.0.1
 jobs:
-  build-and-test:
+  build:
     executor:
       name: node/default
     steps:
       - checkout
       - node/install-packages
-      - run:
-          command: npm run test
 workflows:
   build-and-test:
     jobs:
-      - build-and-test
-  heroku_deploy:
-    jobs:
-    - heroku/deploy-via-git
+      - build
+      - heroku/deploy-via-git
