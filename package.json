@@ -12,7 +12,7 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint '{src,apps,libs,test}/**/*.ts'",
+    "lint": "eslint '{src,apps,libs,test}/**/*.ts' --quiet=true",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -72,7 +72,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint"
+      "pre-push":[ "npm run lint","npm run format"]
     }
   }
 }

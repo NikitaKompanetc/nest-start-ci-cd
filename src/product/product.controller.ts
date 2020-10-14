@@ -21,7 +21,11 @@ export class ProductController {
 
   @Get('/:productId')
   public async getProduct(@Param('productId') productId: string) {
-    const product = await this.productService.getProduct(productId);
+    const product = await this.
+    productService.getProduct(
+      productId
+      )
+      ;
     return product;
   }
 
