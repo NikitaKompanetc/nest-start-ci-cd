@@ -15,7 +15,9 @@ export class ProductService {
   public async createProduct(
     createProductDto: CreateProductDTO,
   ): Promise<Product> {
-    const productDocument = new this.productDocument(createProductDto);
+    const test= {...createProductDto};
+    test.name='test';
+    const productDocument = new this.productDocument(test);
     return await productDocument.save();
   }
 
