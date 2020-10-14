@@ -12,7 +12,7 @@ export class ProductService {
     public productDocument: Model<ProductDocument>,
   ) {}
 
-  public async createProduct(createProductDto: CreateProductDTO): Promise<Product> {
+  public async createProduct(createProductDto: CreateProductDTO) {
     //Goood one
     const productDocument = new this.productDocument(createProductDto);
     return await productDocument.save();
