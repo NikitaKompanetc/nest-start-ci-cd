@@ -72,7 +72,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-push":[ "npm run lint && npm run format"]
+      "pre-commit":"npm run format",
+      "pre-push": "git branch | grep \"*\" | egrep -v \"^* master$\""
     }
   }
 }
